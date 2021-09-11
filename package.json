@@ -1,0 +1,16 @@
+{
+  "name": "hk_code_submission",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "dependencies": {
+    "puppeteer": "^10.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
