@@ -187,15 +187,17 @@ function questionSolver(page,question,answer){
 
 function waitAndClick(selector,cPage){
     return new Promise(function(resolve,reject){
-
-        let waitPromise=cPage.waitForSelector(selector,{visible:true});
-        waitPromise.then(function(){
-            let clickPromise=cPage.click(selector,{delay:1000});
-            return clickPromise;
-        }).then(function(){
+      (async function fn() {
+        try{
+            await cPage.waitForSelector(selector,{visible:true});
+            await cPage.click(selector,{delay:1000});
             resolve();
-        }).catch(function(err){
+        }
+        catch(err){
             reject(err);
-        })
+        }
+
+      })();  
+        
     })
 }
